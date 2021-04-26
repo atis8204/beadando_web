@@ -23,8 +23,9 @@ if(isset($_POST['felhasznalo']) && isset($_POST['jelszo']) && isset($_POST['veze
                                  ':bejelentkezes' => $_POST['felhasznalo'], ':jelszo' => sha1($_POST['jelszo']))); 
             if($count = $stmt->rowCount()) {
                 $newid = $dbh->lastInsertId();
-                $uzenet = "A regisztrációja sikeres.<br>Azonosítója: {$newid}";                     
+                $uzenet = "A regisztrációja sikeres.";                     
                 $ujra = false;
+		header( "refresh:2; url=./" ); 
             }
             else {
                 $uzenet = "A regisztráció nem sikerült.";

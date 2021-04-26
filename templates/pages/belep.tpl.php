@@ -4,6 +4,9 @@
         <a href="?oldal=belepes" ><strong>PRÓBÁLJA ÚJRA!</strong></a>
     <?php } ?>
 <?php } ?>
+<?php if($row) { ?>
+<?php header("Location: ."); ?>
+<?php } ?>
 <?php if(isset($errormessage)) { ?>
     <h2><?= $errormessage ?></h2>
 <?php } ?>

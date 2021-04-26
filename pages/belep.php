@@ -6,7 +6,7 @@
                             array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
             $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
             
-            // Felhsználó keresése
+            // Felhasználó keresése
             $sqlSelect = "select id, csaladi, utonev from azonositas where username = :bejelentkezes and password = :jelszo";
             $sth = $dbh->prepare($sqlSelect);
             $sth->execute(array(':bejelentkezes' => $_POST['felhasznalo'], ':jelszo' => $_POST['jelszo']));
