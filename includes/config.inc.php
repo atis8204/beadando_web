@@ -20,7 +20,7 @@ $oldalak = array(
     '/' => array('fajl' => 'cimlap','szoveg' => '','menun' => array(1,1)),
     'projektek' => array('fajl' => 'projektek', 'szoveg' => 'Projektek', 'menun' => array(1,1)),
     'galeria' => array('fajl' => 'galeria', 'szoveg' => 'Galéria','menun' => array(1,1)),
-    'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolati űrlap','menun' => array(1,1)),
+    'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat','menun' => array(1,1)),
     'adatok' => array('fajl' => 'adatok', 'szoveg' => 'Adatok','menun' => array(1,1)),
     'belepes' => array('fajl' => 'belepes', 'szoveg' => 'Belépés','menun' => array(1,0)),
     'kilepes' => array('fajl' => 'kilepes', 'szoveg' => 'Kilépés','menun' => array(0,1)),
@@ -28,8 +28,8 @@ $oldalak = array(
     'regisztral' => array('fajl' => 'regisztral', 'szoveg' => '', 'menun' => array(0,0))
     
 );
-
-    $MAPPA = 'images/kepek/';
+    $MAPPA = './images/kepek/';
+    $MAPPA2 = '../images/kepek/';
     $TIPUSOK = array ('.jpg', '.png');
     $MEDIATIPUSOK = array('image/jpeg', 'image/png');
     $DATUMFORMA = "Y.m.d. H:i";

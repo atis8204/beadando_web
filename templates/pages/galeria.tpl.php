@@ -2,6 +2,7 @@
     include('includes/config.inc.php');
      $uzenet = array();   
 
+   
     // adatok összegyűjtése:    
     $kepek = array();
     $olvaso = opendir($MAPPA);
@@ -26,9 +27,10 @@
     </style>
 </head>
 <body>
+<hr>
     <div id="galeria">
-        <h1>Feltöltés a galériába:</h1>
-        <?php
+        <?php  if(isset($_SESSION['login']))  { ?> <h2>Feltöltés a galériába:</h2><?php } else { ?><h2>Kérem jelentkezzen be a képek feltöltéséhez!</h2><?php } ?>
+  <?php
         if (!empty($uzenet))
         {
             echo '<ul>';
@@ -49,9 +51,16 @@
             </br>
             <label>Harmadik:
                 <input type="file" name="harmadik">
-            </label>
-            <input type="submit" name="kuld">
+            </label></br>
+       <?php  if(isset($_SESSION['login']))  { ?>
+            <input type="submit" name="kuld" />
+<?php } else { ?>
+    <input type="submit" name="kuld" disabled="disabled" />
+    
+    <?php } ?>
         </form>
+</br>
+        <hr>
         <h1>Galéria</h1>
     <?php
     arsort($kepek);
