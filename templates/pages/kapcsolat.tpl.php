@@ -3,16 +3,17 @@
 <head>
     <title>Űrlap</title>
     <meta charset="utf-8">
+    <script type="text/javascript" src="./js/main.js"></script>
 </head>
 <body>
         <hr>
         <h2>Üzenet küldése:</h2>
-        <form action="?oldal=adatok" method="post">
-            <label>Név:</label></br><input type="text" id="nev" name="nev"><br>
-        <label>E-mail:</label></br><input type="email" id="email" name="email"><br>
-            <label>Telefonszám:</label></br><input type="text" id="tel" name="tel" ><br>
-            <label id="tarea">Üzenet:</label></br><textarea id="text" name="text" rows="10" cols="40" required></textarea><br>
-       <input type="submit" value="Küldés"><br></br>
+        <form action="?oldal=adatok" onsubmit="return ellenoriz();" method="post">
+            <label>Név:</label></br><input type="text" id="nev" name="nev" minlength="8" maxlength="30" required><br>
+        <label>E-mail:</label></br><input type="email" id="email" name="email" required><br>
+            <label>Telefonszám:</label></br><input type="text" id="tel" name="tel" minlength="7" maxlength="10"  pattern="[0-9]{7}[0-9]*" required ><br>
+            <label id="tarea">Üzenet:</label></br><textarea id="text" name="text" rows="10" cols="40" minlength="10" maxlength="1000" required></textarea><br>
+       <input id="kuld "type="submit" "value="Küldés"><br></br>
         </form>
 <hr>
 </body>

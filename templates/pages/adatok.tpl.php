@@ -49,6 +49,22 @@ $re ='/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
 <?php
     }
     ?>
+<?php
+try {
+    // Kapcsolódás
+    $dbh = new PDO('mysql:host=localhost;dbname=login', 'root', '',
+        array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
+    // Beszúrás
+    $sqlInsert = "insert into urlap(id,nev,email,telefon,uzenet) values(0, :nev, :email, :telefon, :uzenet)";
+    $stmt = $dbh->prepare($sqlInsert);
+    $stmt->execute(array(':nev' => $_POST['nev'], ':email' => $_POST['email'], ':telefon' => $_POST['tel'], ':uzenet' => $_POST['text']));
+
+} catch
+(PDOException $e) {
+    echo "Hiba: " . $e->getMessage();
+}
+?>
 </body>
 </html>
