@@ -21,10 +21,11 @@ td {
 <?php
 $re ='/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
 ?>
+
 <?php if(!isset($_POST['nev']) || strlen($_POST['nev']) <8 || strlen($_POST['nev']) >30 && !isset($_POST['email']) ||  !preg_match($re,$_POST['email'])  && !isset($_POST['tel']) || strlen($_POST['tel'])>10 || strlen($_POST['tel'])<7 && !isset($_POST['text']) || strlen($_POST['text'])>1000 || strlen($_POST['text'])<10)
     { ?>
-        <?php echo "<h3><hr>Mezők kitöltése kötelező.<br><br>Kérem a megfelelő karakterszámot adja meg!</h3><hr> ";
-        header( "refresh:3; url=./?oldal=kapcsolat" ); ?>
+        <?php echo "<h3><hr>Mezők kitöltése kötelező.<br><br>Kérem a megfelelő karakterszámot adja meg! Használja a Kapcsolat menüpontot az űrlap kitöltéséhez.</h3><hr> ";
+        header( "refresh:4; url=./?oldal=kapcsolat" ); ?>
 
   <?php  }
      else { ?>
@@ -47,12 +48,9 @@ $re ='/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
 <br></br>
 <hr>
 <?php
-    }
-    ?>
-<?php
 try {
     // Kapcsolódás
-    $dbh = new PDO('mysql:host=localhost;dbname=login', 'root', '',
+    $dbh = new PDO('mysql:host=localhost;dbname=x001349_db', 'x001349_db', 'Nemmondommeg12',
         array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
@@ -65,6 +63,7 @@ try {
 (PDOException $e) {
     echo "Hiba: " . $e->getMessage();
 }
-?>
+    }
+    ?>
 </body>
 </html>

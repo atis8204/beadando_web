@@ -39,7 +39,7 @@
             echo '</ul>';
         }
         ?>
-        <form action="feltolt.php" method="post"
+        <form action="./pages/feltolt.php" method="post"
               enctype="multipart/form-data">
             <label>Első:
                 <input type="file" name="elso" required>

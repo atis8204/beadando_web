@@ -1,6 +1,11 @@
 header {
     background-color: white;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: 700;
+    font-family: 'Raleway', arial, sans-serif;
 }
 
 header img {
@@ -12,18 +17,20 @@ header img {
 
 header nav ul {
     list-style-type: none;
-  padding: 85px 160px 50px 0px;
+    padding: 85px 160px 50px 0px;
     float: right;
     
 }
 
 header nav ul li {
     display: inline;
-    padding: 10px; 
+    padding: 5px 15px;
+    font-family: 'Raleway', arial, sans-serif;
+    font-size: 13px;
 }
 
-
 header nav ul a {
+
     color: #333;
     display: inline-block;
     text-transform: uppercase;
@@ -31,7 +38,7 @@ header nav ul a {
     white-space: nowrap;
     letter-spacing: .17em;
     text-decoration: none;
-    
+
 }
 
 
@@ -66,9 +73,10 @@ footer nav ul {
 
 footer nav ul li {
     display: inline;
-    padding: 10px; 
+    padding: 10px;
+    font-family: 'Raleway', arial, sans-serif;
+    font-size: 14px;
 }
-
 
 footer nav ul a {
     color: #fff9fb;
@@ -76,8 +84,11 @@ footer nav ul a {
     text-decoration: none;
     white-space: nowrap;
     letter-spacing: .17em;
-   
-  
+}
+
+footer nav ul li:hover {
+    color: #fff9fb;
+    border-bottom: 1px solid;
 }
 
 .lablec2 {
@@ -138,3 +149,18 @@ input, select ,textarea {
     display: inline-block;
 }
 
+h2.entry-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.block-kapcsolat hr.short.titlehr {
+    height: 3px;
+    width: 40px;
+    background-color: #f28500;
+}
+
+.page .main {
+    padding: 0 0 8.3333% 0;
+}
