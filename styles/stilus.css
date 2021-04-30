@@ -1,41 +1,71 @@
 header {
     background-color: white;
+}
+
+.site {
+    width: 100%;
+    position: static;
+    float: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+
+    font-family: 'Raleway', arial, sans-serif;
+    text-transform: uppercase;
+}
+
+header {
+    position: relative;
+    float: top;
+}
+
+.alapito {
+    width: available;
+    background-color: #f28500;
+    background-image: image("./images/bd.png");
 
 }
 
 header img {
-    with: 355px;
-    height:155px;
-    margin: 20px 10px 0px 10px;
+    height:240px;
+    margin: 20px 50px;
     float:left;
 }
 
 header nav ul {
     list-style-type: none;
-  padding: 85px 160px 50px 0px;
+    padding: 110px 20px 20px 0;
     float: right;
-    
+
 }
 
 header nav ul li {
     display: inline;
-    padding: 10px; 
+    padding: 5px 15px;
+    font-family: 'Raleway', arial, sans-serif;
+    font-size: 12px;
 }
 
-
 header nav ul a {
+
     color: #333;
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
     letter-spacing: .17em;
-    text-decoration: none;
-    
+}
+/*
+header nav ul li:hover {
+    border-bottom: 2px solid;
 }
 
-
-
+header nav ul li.active {
+    color: #fff9fb;
+    font-weight: bold;
+}
+*/
 footer {
     width: auto;
     height: 245px;
@@ -43,10 +73,10 @@ footer {
 }
 
 footer img {
-    with: 100px;
+    width: 100px;
     height:136px;
     float: left;
-    margin: 30px 0px 0px 150px;
+    margin: 30px 0 0 50px;
 
 }
 footer nav {
@@ -59,16 +89,15 @@ footer nav ul {
     list-style-type: none;
     text-align: left;
     float:left;
-    margin: 150px 0px 0px 60px;
-
-    
+    margin: 150px 0 0 60px;
 }
 
 footer nav ul li {
     display: inline;
-    padding: 10px; 
+    padding: 10px;
+    font-family: 'Raleway', arial, sans-serif;
+    font-size: 14px;
 }
-
 
 footer nav ul a {
     color: #fff9fb;
@@ -76,9 +105,13 @@ footer nav ul a {
     text-decoration: none;
     white-space: nowrap;
     letter-spacing: .17em;
-   
-  
 }
+/*
+footer nav ul li:hover {
+    color: #fff9fb;
+    border-bottom: 1px solid;
+}
+*/
 
 .lablec2 {
  color: #fff9fb;
@@ -89,9 +122,8 @@ footer nav ul a {
 }
 
 div#content {
-
     width: 100%;
-    padding: 180px 0px 0px 0px;
+    padding: 0 0 0 0;
 }
 
 div#keret img {
@@ -119,16 +151,11 @@ h2.rolunk {
     line-height: 150%;
 }
 
-.second-block {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('images/bg.png');
-}
 label {
     width: 90px;
     display: inline-block;
 }
+
 input, select ,textarea {
     margin: 10px 0;
     padding: 2px;
@@ -138,3 +165,322 @@ input, select ,textarea {
     display: inline-block;
 }
 
+.entry-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.block-kapcsolat hr.short.titlehr {
+    height: 3px;
+    width: 40px;
+    background-color: #f28500;
+}
+#csapi hr.short.titlehr {
+    height: 3px;
+    width: 40px;
+    background-color: #f28500;
+}
+
+
+.block-kapcsolat {
+    font-family: 'Raleway', arial, sans-serif;
+    line-height:30px;
+}
+
+.csapatc hr.short.titlehr {
+    height: 3px;
+    width: 40px;
+    background-color: #f28500;
+}
+
+.entry-content hr.short.title {
+    height: 3px;
+    width: 80px;
+    background-color: #f7931d;
+}
+
+.entry-content2 hr.short.title {
+    height: 3px;
+    width: 80px;
+    background-color: #f7931d;
+}
+
+.g_intro {
+    background-image: url(.images/unnamed-2.jpg);
+    position: static;
+    display: compact;
+    float: left;
+    width: 100%;
+    min-height: 900px;
+    height: auto;
+    background: no-repeat top;
+    background-size: cover;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    font-family: 'Raleway', arial, sans-serif;
+}
+.intro_belso{
+    height: auto;
+    margin: 10% 10%;
+    background: rgba(255, 255, 255, 0.74);
+    color: #2b2b2b;
+    max-width: 50%;
+    left: 30%;
+    right: 0;
+    top: 30%;
+    padding: 10px;
+}
+
+.intro_belso h1 {
+    font-size: medium;
+    color: #f28500;
+}
+.intro_belso p {
+    font-size: 18px;
+}
+
+.o_button {
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    -webkit-appearance: button;
+    background-color: #f7931d;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.0rem;
+    font-weight: 500;
+    padding: 0.7917em 1.5em;
+    text-transform: uppercase;
+    transition: padding .2s;
+    text-decoration: none;
+}
+
+.o_button:hover{
+    outline: 0;
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+}
+
+.g_block-one {
+    position: static;
+    display: table;
+    width: 100%;
+    padding: 60px 0;
+    height: 250px;
+    font-family: 'Raleway', arial, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height:30px;
+    word-wrap: break-word;
+    background: #88ceeb;
+}
+
+.g_block-one_belso {
+    margin: 0 20%;
+}
+
+.titlehr {
+    height: 3px;
+    width: 40px;
+    background-color: white;
+}
+
+hr.short{
+    height: 3px;
+    width: 40px;
+    background-color: white;
+}
+
+.g_block-two {
+    width: 100%;
+    padding: 60px 0;
+    min-height: 900px;
+    height: auto;
+    font-family: 'Raleway', arial, sans-serif;
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+    background: #f7931d;
+}
+
+.g_block-two_belso{
+    position: static;
+    height: auto;
+    background: #f7931d;
+    color: #ffffff;
+    left: 30%;
+    right: 0;
+    top: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.ketoszlopnak {
+    position: static;
+    margin: 10px 300px;
+}
+
+.twocolumn {
+    position: relative;
+    max-width: 40%;
+    color: #ffffff;
+    font-size: 18px;
+    line-height:30px;
+    background-size: auto;
+}
+
+p.entry-content {
+    text-align: center;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+.csapat {
+    clear: both;
+    width: 100%;
+    min-height: 500px;
+    margin: auto;
+}
+
+.entry-content.csapat {
+    width: 1280px;
+    margin: 1% 15%;
+    text-align: center;
+}
+
+.fourcolumn {
+    min-height: 700px;
+    font-size: 18px;
+    line-height:30px;
+    text-align: center;
+}
+
+.fourcolumn:nth-child(1) {
+    background: #f28500;
+}
+.fourcolumn:nth-child(2) {
+    background: #87ceeb;
+}
+.fourcolumn:nth-child(3) {
+    background: #f28500;
+}
+.fourcolumn:nth-child(4) {
+    background: #87ceeb;
+}
+
+.col-lg-3:hover {
+    background: #f5f4f4;
+}
+
+.entry-content {
+    text-align: center;
+}
+
+.col-lg-4:nth-child(even) {
+    border: 4px #f28500;
+}
+.col-lg-4:nth-child(odd) {
+    border: 4px #87ceeb;
+}
+
+.aboutpage, .cd-fixed-bg-one {
+    background-size: cover;
+    position: static;
+    display: table;
+    font-family: 'Raleway', arial, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+    line-height:30px;
+    word-wrap: break-word;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 10px;
+}
+.post-thumbnail {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.belep {
+    width: 400px;
+    min-height: 400px;
+}
+
+.regiszt, .uzenet {
+    width: 400px;
+    min-height: 400px;
+ }
+
+.galeri {
+    padding: 10px;
+    width: 400px;
+}
+
+.adatok {
+    position: center;
+    margin: auto;
+    padding: 300px 10% 5% 10%;
+}
+
+#tablak {
+    position: center;
+    margin: auto;
+    padding: 300px 10% 5% 10%;
+}
+
+fieldset {
+    background-color: #f28500;
+    border: 5px solid #1F497D;
+    border-radius: 10px;
+}
+
+fieldset legend {
+    background: #1F497D;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 18px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 3px #ddd;
+    margin-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 2px solid #1F497D;
+    text-align: center;
+}
+
+caption {
+    background-color: #f28500;
+    border: 2px solid #1F497D;
+}
+
+.video {
+    clear: both;
+    position: center;
+    margin: auto;
+    padding: 50px 10% 5% 10%;
+}
+
+.video1, .video2 {
+    position: static;
+    float: snap;
+    margin: auto;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+}

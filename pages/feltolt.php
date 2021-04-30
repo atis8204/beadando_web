@@ -19,7 +19,7 @@ $uzenet = array();
                     $uzenet[] = " Már létezik: " . $fajl['name'];
                 else {
                     move_uploaded_file($fajl['tmp_name'], $vegsohely);
-                    $uzenet[] = ' Rendben. A fájl neve: : ' . $fajl['name'];
+                    $uzenet[] = ' Rendben. A fájl neve: ' . $fajl['name'];
                 }
             }
         }
@@ -50,7 +50,7 @@ if (!empty($uzenet))
         echo "<li>$u</li>";
     echo '</ul>';
 }
-header( "refresh:3; url=../?oldal=belepes" );
+header( "refresh:2; url=../?oldal=galeria" );
 ?>
 </form>
 </body>

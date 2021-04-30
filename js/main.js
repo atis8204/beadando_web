@@ -18,7 +18,7 @@ function ellenoriz() {
 
 	var tel = document.getElementById("tel");
 	if (tel) {
-		if (tel.value.length<7 || tel.value.length>10) {
+		if (tel.value.length<7 || tel.value.length>12) {
 			rendben = false;
 			tel.style.background = '#f99';
 			fokusz = tel;

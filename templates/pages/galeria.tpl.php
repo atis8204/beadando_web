@@ -24,13 +24,27 @@
         div#galeria {margin: 0 auto; width: auto;}
         div.kep { display: inline-block; }
         div.kep img { width: 200px; }
+
+        header nav ul li:hover {
+            border-bottom: 2px solid;
+        }
+        header nav ul li.active {
+            color: #fff9fb;
+            font-weight: bold;
+        }
+        footer nav ul li:hover {
+            color: #fff9fb;
+            border-bottom: 1px solid;
+        }
     </style>
 </head>
 <body>
-<hr>
     <div id="galeria">
         <?php  if(isset($_SESSION['login']))  { ?> <h2>Feltöltés a galériába:</h2><?php } else { ?><h2>Kérem jelentkezzen be a képek feltöltéséhez!</h2><?php } ?>
-  <?php
+        <div class="galeri" id="galeriak" >
+        <fieldset>
+            <legend background-color="#fff">Feltöltés</legend>
+        <?php
         if (!empty($uzenet))
         {
             echo '<ul>';
@@ -39,7 +53,7 @@
             echo '</ul>';
         }
         ?>
-        <form action="feltolt.php" method="post"
+        <form action="./pages/feltolt.php" method="post"
               enctype="multipart/form-data">
             <label>Első:
                 <input type="file" name="elso" required>
@@ -59,6 +73,8 @@
     
     <?php } ?>
         </form>
+            </fieldset>
+        </div>
 </br>
         <hr>
         <h1>Galéria</h1>
